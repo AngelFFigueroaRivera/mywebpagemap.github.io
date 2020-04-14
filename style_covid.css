@@ -472,7 +472,7 @@
                         position: absolute;
                         margin: 0em;
                         padding: .1em .10em;
-                        top: 2.8em;
+                        top: 3.1em;
                         right: 0em;
                         background-color: black;
                         overflow: scroll;
@@ -489,7 +489,7 @@
                         padding: .7vh .9vw;
                         background-color: black;
                         left: 0em;
-                        top: 2.9em;    
+                        top: 3.1em;    
                     }
                     #console:hover {
                         opacity: 1;

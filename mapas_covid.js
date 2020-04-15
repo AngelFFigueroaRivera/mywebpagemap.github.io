@@ -788,11 +788,11 @@ function graphicmovile() {
         .attr("class", "axis")
         .call(yAxis);
             
-    svg.selectAll(".dotm")
+    svg.selectAll(".dot")
         .data(lineData)
         .enter()
         .append("circle") // Uses the enter().append() method
-        .attr("class", "dotm") // Assign a class for styling
+        .attr("class", "dot") // Assign a class for styling
         .attr("cx", function(d) { return x(d.date) })
         .attr("cy", function(d) { return y(d.nps) })
         .style('fill', 'darkOrange')

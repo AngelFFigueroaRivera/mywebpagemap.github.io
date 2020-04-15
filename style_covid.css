@@ -326,6 +326,10 @@ font-size: 16px;
 
 #graph-modal {
   width: fit-content;
+}
+
+#graph-modalm {
+  width: fit-content;
   margin: auto;
   margin-top: 30px;
 }

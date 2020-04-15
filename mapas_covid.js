@@ -13,16 +13,6 @@ var firebaseConfig = {
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 
-var contagios={}
-
-counter = 0;
-var estado ={"AGS":[],
-        "BC":[],"BCS":[],"CAMP":[],"CHIS":[],"CHIH":[],"CDMX":[],
-        "COAH":[],"COL":[],"DGO":[],"GTO":[],"GRO":[],"HGO":[],"JAL":[],
-        "MEX":[],"MICH":[],"MOR":[],"NAY":[],"NL":[],"OAX":[],"PUE":[],
-        "QRO":[],"QROO":[],"SLP":[],"SIN":[],"SON":[],"TAB":[],"TAMP":[],
-        "TLAX":[],"VER":[],"YUC":[],"ZAC":[]
-};
 //fecha de inicio 15 de marzo son 2 por dia
 function days_passed() {
     var start =new Date(2020, 2, 15) //Month is 0-11 in JavaScript
@@ -34,29 +24,53 @@ function days_passed() {
     return 2*(Math.ceil((today.getTime()-start.getTime())/(one_day)));
 }
 
+
+
 firebase.database().ref('masterSheet').once('value', function(datos){
+    estado ={"AGS":[],
+        "BC":[],"BCS":[],"CAMP":[],"CHIS":[],"CHIH":[],"CDMX":[],
+        "COAH":[],"COL":[],"DGO":[],"GTO":[],"GRO":[],"HGO":[],"JAL":[],
+        "MEX":[],"MICH":[],"MOR":[],"NAY":[],"NL":[],"OAX":[],"PUE":[],
+        "QRO":[],"QROO":[],"SLP":[],"SIN":[],"SON":[],"TAB":[],"TAMP":[],
+        "TLAX":[],"VER":[],"YUC":[],"ZAC":[]
+    };
     contagios=datos.val();
-    for(i=0;i<=31;i++){
-        for(j=0;j<=days_passed();j++){
-            if(j==0){
-                console.log("Estado:"+contagios[i][j])
-            }
-            else{
-                if(j%2!=0){
-                    console.log("Positivos:"+contagios[i][j])//imprime cada estado y los casos
+    //console.log(contagios);
+    for(i=0;i<=32;i++){
+        var state_name=contagios[i][0];
+        var cases =[];
+        if(i!=0){
+            for(j=0;j<=days_passed();j++){
+                if(j==0){
+                    //console.log("Estado:"+contagios[i][j]);
                 }
                 else{
-                    console.log("Sospechosos:"+contagios[i][j])//imprime cada estado y los casos
+                    if(j%2!=0){
+                        //console.log("Positivos:"+contagios[i][j]);//imprime cada estado y los casos
+                        cases.push(contagios[i][j]);
+                    }
+                    else{
+                        //console.log("Sospechosos:"+contagios[i][j]);//imprime cada estado y los casos
+                        cases.push(contagios[i][j]);
+                    }
                 }
             }
-            
+            //console.log(cases)
+            estado[state_name] = cases;
+        }
+        else{
+            for(j=0;j<=days_passed();j++){
+            }
         }
     }
+
+    console.log("Lista llenada")
+    console.log(estado);
+
+    
 },function(objetoError){
     console.log('Error de lectura:'+objetoError.code);
 });
-
-
 
 
 function sortTable() {
@@ -600,7 +614,7 @@ Promise.all(loadFiles).then(function(data) {
             return new Date(b.date) - new Date(a.date);
         });
         graphic();
-        graphimobile();
+        graphicmovile();
 });
 
 function numberWithCommas(x) {
@@ -708,13 +722,13 @@ function graphic() {
 }
 
 
-function graphimobile() {
+function graphicmovile() {
     const vw = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
     const vh = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
 
-    var height  = 0.65*vh;
-    var width   = 0.60*vw;;
-    var margin = {top: 10, right: 10, bottom: 10, left: 30};
+    var height  = 0.45*vh;
+    var width   = 0.40*vw;;
+    var margin = {top: 10, right: 20, bottom: 40, left: 30};
 
     width =     width - margin.left - margin.right;
     height =    height - margin.top - margin.bottom;

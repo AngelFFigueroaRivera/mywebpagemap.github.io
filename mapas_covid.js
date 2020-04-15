@@ -726,8 +726,8 @@ function graphicmovile() {
     const vw = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
     const vh = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
 
-    var height  = 0.25*vh;
-    var width   = 0.15*vw;;
+    var height  = 0.28*vh;
+    var width   = 0.20*vw;;
     var margin = {top: 10, right: 20, bottom: 40, left: 30};
 
     width =     width - margin.left - margin.right;

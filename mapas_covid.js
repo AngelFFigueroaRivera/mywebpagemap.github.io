@@ -714,7 +714,7 @@ function graphimobile() {
 
     var height  = 0.55*vh;
     var width   = 0.50*vw;;
-    var margin = {top: 10, right: 20, bottom: 40, left: 30};
+    var margin = {top: 10, right: 20, bottom: 10, left: 10};
 
     width =     width - margin.left - margin.right;
     height =    height - margin.top - margin.bottom;

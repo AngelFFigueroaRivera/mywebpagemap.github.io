@@ -72,7 +72,7 @@ var map = new mapboxgl.Map({
     style: 'mapbox://styles/mildredg/ck8xwex5j19ei1iqkha7x2sko',*/
     style: 'mapbox://styles/mildredg/ck8xwex5j19ei1iqkha7x2sko',
     center: [-101.33083597801148, 22.192387333218626], // starting position [lng, lat]
-    zoom: 4.1 // starting zoom
+    zoom: 3.8 // starting zoom
 });
 
 
@@ -399,6 +399,7 @@ Promise.all(loadFiles).then(function(data) {
         // When the user moves their mouse over the state-fill layer, we'll update the
         // feature state for the feature under the mouse.
         map.on("mousemove", function(e) {
+            console.log("Hiiiii");
             var features = map.queryRenderedFeatures(e.point, {
                 layers: ["pref"]
             });
@@ -421,12 +422,12 @@ Promise.all(loadFiles).then(function(data) {
             overlay.innerHTML = '';
 
             popup_mes.setLngLat(e.lngLat)
-                .setHTML(feature.properties.ABREV + "<br/> Pos.:" + feature.properties[today_p] +"<br/>Sosp.:"+ feature.properties[today_s])
+                .setHTML(feature.properties.ABREV + "<br/> <circle r='4' fill='#ff4747'></circle>Positivos: " + feature.properties[today_p] +"<br/><circle r='4' fill='#ffe73e'></circle>Sospechosos: "+ feature.properties[today_s])
                 .addTo(map);
-            document.getElementById(feature.properties.ABREV).style.background = '#bcbddc';
+            document.getElementById(feature.properties.ABREV).style.background = '#393a54';
             var element_touched_c = feature.properties.ABREV
             if (element_touched_c !== element_touched_a) {
-                document.getElementById(element_touched_a).style.background = 'black';
+                document.getElementById(element_touched_a).style.background = '#222';
                 element_touched_a = element_touched_c;
             }
         });
@@ -562,16 +563,6 @@ Promise.all(loadFiles).then(function(data) {
 
         });
 
-        //svg.selectAll(".text")
-            //.data(lineData)
-            //.enter()
-            //.append("text") // Uses the enter().append() method
-            //.attr("class", "label") // Assign a class for styling
-            //.attr("x", function(d, i) { return x(d.date) })
-            //.attr("y", function(d) { return y(d.nps) })
-            //.attr("dy", "-5")
-            //.text(function(d) {return d.nps;});
-
         svg.append("text")
             .attr("x", (width / 2))             
             .attr("y", 0)
@@ -584,4 +575,8 @@ Promise.all(loadFiles).then(function(data) {
 
 function numberWithCommas(x) {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+}
+
+let eventHandlers = () => {
+    console.log("hi");
 }

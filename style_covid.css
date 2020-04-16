@@ -98,9 +98,6 @@ hr {
   font-size: 1em;
 }
 
-#fechacorte_lm {
-  font-size: 1em;
-}
 
 input:checked + .slider {
   background-color: #ff4747;
@@ -338,11 +335,16 @@ font-size: 16px;
   }
   #slidercontainer {
     position: absolute;
-    width: 100%;
-    right: 0em;
-    top: 63px;
+    width: 80%;
+    left: 0em;
+    top: 50px;
     background-color: black;
   }
+
+  #fechacorte_lm {
+    font-size: 1em;
+  }
+
   #buttoncontainer {
     position: absolute;
     display: flex;

@@ -353,7 +353,7 @@ font-size: 16px;
     background-color: black;
   }
 
-  #fechacorte_l {
+  #fechacorte_lm {
     font-size: 1.5em;
     margin-left: 16px;
     margin-top: -7px;
@@ -424,6 +424,15 @@ font-size: 16px;
     display: inline-flex;
     height: 90vh;
   }
+  
+  #slidercontainer {
+    display: none;
+  }
+
+  #logocontainermovil {
+    display: none;
+  }
+  
   #buttoncontainer {
     display: none;
   }

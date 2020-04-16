@@ -191,7 +191,6 @@ Promise.all(loadFiles).then(function(data) {
     }
 
     document.getElementById('fechacorte_l').innerText = label_fecha;
-    document.getElementById('fechacorte_lm').innerText = label_fecha;
     document.getElementById('fechacorte_r').innerText = label_fecha;
     data[0].features = data[0].features.map(feature => {
         data[1].forEach(estadosData => {
@@ -362,7 +361,6 @@ Promise.all(loadFiles).then(function(data) {
             }
 
             document.getElementById('fechacorte_l').innerText = label_fecha;
-            document.getElementById('fechacorte_lm').innerText = label_fecha;
             document.getElementById('fechacorte_r').innerText = label_fecha;
 
             for (var i = 0; i < data[1].length; i++) {

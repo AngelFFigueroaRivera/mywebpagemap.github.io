@@ -727,14 +727,14 @@ function graphicmovile() {
     const vh = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
 
     var height  = 0.45*vh;
-    var width   = 0.80*vw;
+    var width   = 0.75*vw;
     var margin = {top: 10, right: 10, bottom: 40, left: 20};
 
     //width =     width - margin.left - margin.right;
     //height =    height - margin.top - margin.bottom;
 
-    width =     width - margin.right;
-    height =    height - margin.bottom;
+    width =    width - margin.right;
+    height =   height - margin.bottom;
 
     var svg = d3.select('#graficomov')
         .append("svg")

@@ -353,12 +353,6 @@ font-size: 16px;
     background-color: black;
   }
 
-  #fechacorte_lm {
-    font-size: 1.5em;
-    margin-left: 16px;
-    margin-top: -7px;
-    margin-bottom: 18px;
-  }
 
   #buttoncontainer {
     position: absolute;
@@ -431,6 +425,13 @@ font-size: 16px;
 
   #logocontainermovil {
     display: none;
+  }
+  
+  #fechacorte_l {
+    font-size: 1.5em;
+    margin-left: 16px;
+    margin-top: -7px;
+    margin-bottom: 18px;
   }
   
   #buttoncontainer {

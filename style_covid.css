@@ -355,9 +355,9 @@ font-size: 16px;
 
   #fechacorte_l {
     font-size: 1.5em;
-    margin-left: 15px;
+    margin-left: 16px;
     margin-top: -7px;
-    margin-bottom: 18px
+    margin-bottom: 18px;
   }
 
   #buttoncontainer {

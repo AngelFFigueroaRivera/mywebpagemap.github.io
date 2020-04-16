@@ -360,7 +360,6 @@ Promise.all(loadFiles).then(function(data) {
                 label_fecha = today_p.substr(1,(today_p.search("p")-1)) + ' de ' + 'Mayo';
             }
 
-            document.getElementById('fechacorte_lm').innerText = label_fecha;
             document.getElementById('fechacorte_l').innerText = label_fecha;
             document.getElementById('fechacorte_r').innerText = label_fecha;
 

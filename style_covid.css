@@ -333,6 +333,16 @@ font-size: 16px;
   #map {
     width: 100vw;
   }
+
+  #logocontainermovil {
+    position: absolute;
+    width: 40%;
+    right: 0px;
+    top: 0;
+    border-radius: 5px;
+    height: 90%;
+  }
+
   #slidercontainer {
     position: absolute;
     width: 100%;

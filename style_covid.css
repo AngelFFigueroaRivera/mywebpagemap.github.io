@@ -98,6 +98,12 @@ hr {
   font-size: 1em;
 }
 
+#fechacorte_lm {
+  font-size: 1.5em;
+  margin-left: 16px;
+  margin-top: -7px;
+  margin-bottom: 18px;
+}
 
 input:checked + .slider {
   background-color: #ff4747;
@@ -425,13 +431,6 @@ font-size: 16px;
 
   #logocontainermovil {
     display: none;
-  }
-
-  #fechacorte_lm {
-    font-size: 1.5em;
-    margin-left: 16px;
-    margin-top: -7px;
-    margin-bottom: 18px;
   }
   
   #buttoncontainer {

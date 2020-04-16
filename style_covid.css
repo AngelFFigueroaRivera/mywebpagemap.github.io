@@ -335,9 +335,9 @@ font-size: 16px;
   }
   #slidercontainer {
     position: absolute;
-    width: 80%;
+    width: 100%;
     left: 0em;
-    top: 50px;
+    bottom: 69px;
     background-color: black;
   }
 

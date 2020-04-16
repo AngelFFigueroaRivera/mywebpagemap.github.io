@@ -349,15 +349,15 @@ font-size: 16px;
     left: 0em;
     bottom: 20px;
     border-radius: 5px;
-    height: 110px;
+    height: 118px;
     background-color: black;
   }
 
   #fechacorte_l {
-    margin-bottom: 9px;
-    font-size: 1em;
+    font-size: 1.5em;
     margin-left: 15px;
     margin-top: -7px;
+    margin-bottom: 18px
   }
 
   #buttoncontainer {

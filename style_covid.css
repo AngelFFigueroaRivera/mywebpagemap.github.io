@@ -335,14 +335,19 @@ font-size: 16px;
   }
   #slidercontainer {
     position: absolute;
-    width: 100%;
+    width: 99%;
     left: 0em;
-    bottom: 69px;
+    bottom: 22px;
+    border-radius: 5px;
+    height: 96px;
     background-color: black;
   }
 
   #fechacorte_l {
+    margin-bottom: 9px;
     font-size: 1em;
+    margin-left: 15px;
+    margin-top: -7px;
   }
 
   #buttoncontainer {
@@ -374,6 +379,8 @@ font-size: 16px;
   }
   #slider {
     display: absolute;
+    width: 98%;
+    margin-left: 3px;
   }
   #estados {
       display: none;

@@ -98,6 +98,10 @@ hr {
   font-size: 1em;
 }
 
+#fechacorte_lm {
+  font-size: 1em;
+}
+
 input:checked + .slider {
   background-color: #ff4747;
 }
@@ -332,6 +336,13 @@ font-size: 16px;
   #map {
     width: 100vw;
   }
+  #slidercontainer {
+    position: absolute;
+    width: 100%;
+    right: 0em;
+    top: 63px;
+    background-color: black;
+  }
   #buttoncontainer {
     position: absolute;
     display: flex;
@@ -373,6 +384,18 @@ font-size: 16px;
     background-color: white;
     border: 2px solid #222;
     border-radius: 3px;
+  }
+
+  .sliderC {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 0.7em;
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+    margin-top: 5px;
   }
 
 }
